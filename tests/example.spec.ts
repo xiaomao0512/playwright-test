@@ -18,3 +18,9 @@ test('p 內容正確', async ({ page }) => {
   const p = page.locator('p');
   await expect(p).toHaveText('這是一段被 JavaScript 修改的文字。');
 });
+
+test('h2 內容正確', async ({ page }) => {
+  await page.goto('file://' + process.cwd() + '/index.html');
+  const h2 = page.locator('h2');
+  await expect(h2).toHaveText('Todo List (with PR demo)');
+});
