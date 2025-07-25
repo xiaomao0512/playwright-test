@@ -24,3 +24,9 @@ test('h2 內容正確', async ({ page }) => {
   const h2 = page.locator('h2');
   await expect(h2).toHaveText('Todo List (with PR demo)');
 });
+
+test('h3 內容正確', async ({ page }) => {
+  await page.goto('file://' + process.cwd() + '/index.html');
+  const h3 = page.locator('h3');
+  await expect(h3).toHaveText('Item 1');
+});
