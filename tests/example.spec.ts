@@ -25,8 +25,8 @@ test('h2 內容正確', async ({ page }) => {
   await expect(h2).toHaveText('Todo List (with PR demo)');
 });
 
-test('ul 內容正確', async ({ page }) => {
+test('h3 內容正確', async ({ page }) => {
   await page.goto('file://' + process.cwd() + '/index.html');
-  const ul = page.locator('ul');
-  await expect(ul).toHaveText('Item 1Item 2Item 3');
+  const h3 = page.locator('h3');
+  await expect(h3).toHaveText('Item 1');
 });
